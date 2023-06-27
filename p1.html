@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="p1.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Harshita</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#section" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#Education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="section"class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Harshita<br />
+          </h1>
+          <p class="description">
+            Welcome to my  portfolio! I'm Harshita, a skilled and
+            creative Student with a passion for creating beautiful,
+            responsive, and user-friendly websites.
+          </p>
+
+        </div>
+        <div class="image">
+          <img src="img1.jpeg"  />
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="about">
+
+        </div>
+    </section>
+<div id="about">           
+      <div class="row">
+          <div class="about-col-2">
+
+              <h1 class="subtitle">About Me</h1><br>
+              <p>To pursue a job opportunity in a competitive environment <br>that will challenge me to push my boundaries and expand my
+               <br> knowledge in the field of computer science while allowing <br>me to add value to the dynamics of the company.<br>
+              </p>
+              <div class="tab">
+                  <button class="tablinks" data-tab="skills">skills</button>
+                  
+                  <button class="tablinks" data-tab="Achivments">Achivments</button>
+                  <div class="line"></div>
+              </div>
+              
+              <div id="skills" class="tabcontent">
+                
+               <h2>skills</h2>
+               <p>HTML<br>
+                  css<br>
+                  javascript<br>
+                  python<br>
+                  java<br>
+                   SQL
+                </p>
+              </div>
+
+               <div id="Achivments" class="tabcontent">
+                <h2>Achivments</h2>
+                <p>
+                    1. Android Application Development workshop.<br>
+                    2. Certificate for Completion of HTML Training by Spoken Tutorial Project at IIT Bombay.<br>
+                    3. Machine learning with python by Verzeo.<br>
+                    4. Java Fundamentals by Oracle Academy.<br>
+                    5. AI with Machine learning by Oracle Academy.
+                </p>
+               </div>
+
+          </div>
+      </div>
+</div>
+
+
+  <div id="Education">
+     <div class="row">
+        <div class="education-col">
+            
+            <h1>Education</h1>
+            <h5>My Journey</h5>
+            <h2>class 10th</h2>
+            <p>Army Public School</p>
+            <h2>Intermediate</h2>
+            <p>sri chaitanya junior college</p>
+            <h2>Btech</h2>
+            <p>Matrusri Engineering college</p>
+        </div>
+      </div>
+  </div>
+
+
+<script>
+  var tabButtons = document.querySelectorAll(".tablinks");
+  
+  for (var i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].addEventListener("click", function () {
+      var tabName = this.dataset.tab;
+      var tabContent = document.getElementById(tabName);
+      var allTabContent = document.querySelectorAll(".tabcontent");
+      var allTabButtons = document.querySelectorAll(".tablinks");
+  
+      for (var j = 0; j < allTabContent.length; j++) {
+        allTabContent[j].style.display = "none";
+      }
+  
+      for (var k = 0; k < allTabButtons.length; k++) {
+        allTabButtons[k].classList.remove("active");
+      }
+  
+      tabContent.style.display = "block";
+      this.classList.add("active");
+  
+     
+    });
+  }
+  
+  document.querySelector(".tablinks").click();
+  </script>
+          
+    <div id="skills"> 
+               
+
+    </div>
+
+          <section id="contact">
+              <div class="section-header">
+                <div class="container">
+                  <h4>get in touch </h4>
+                  <h2>Contact me</h2>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos eaque doloremque, nulla mollitia facilis temporibus ullam voluptas nostrum consequatur? Fugiat vitae sint quo est eveniet perspiciatis eum asperiores ipsam.</p>
+                </div>
+              </div>
+              <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+              <div class="container">
+                <div class="row">
+                  
+                  <div class="contact-info">
+                    
+                    <div class="contact-info-item">
+                      
+                      
+                      <div class="contact-info-content">
+                       
+                        <p><a href="https://www.linkedin.com/in/harshita-reddy-b6108b259"><div class="contact-info-icon">
+                          <i class="fa fa-linkedin" aria-hidden="true"></i>
+                         
+                        </div></a></p>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="contact-info-item">
+                      
+                      
+                      <div class="contact-info-content">
+                       
+                       <p ><a href="mailto:harshitareddy3180@gmail.com"><div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                      </div></a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-form">
+                    <form action="" id="contact-form">
+                      <h2>Send Message</h2>
+                      <div class="input-box">
+                        <input type="text" required="true" name="">
+                        <span>Full Name</span>
+                      </div>
+                      
+                      <div class="input-box">
+                        <input type="email" required="true" name="">
+                        <span>Email</span>
+                      </div>
+                      
+                      <div class="input-box">
+                        <textarea required="true" name=""></textarea>
+                        <span>Type your Message...</span>
+                      </div>
+                      
+                      <div class="input-box">
+                        <input type="submit" value="Send" name="">
+                      </div>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+           
+          </section>
+  </body>
+</html>
